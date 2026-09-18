@@ -1,0 +1,4 @@
+#!/bin/sh
+set -eu
+export GOPROXY="${GOPROXY:-https://goproxy.cn,direct}"
+go run ./cmd/migrate

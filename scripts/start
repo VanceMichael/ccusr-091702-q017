@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+export GOPROXY="${GOPROXY:-https://goproxy.cn,direct}"
+go build -o /tmp/service-server ./cmd/server
+exec /tmp/service-server
